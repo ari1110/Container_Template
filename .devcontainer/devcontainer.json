@@ -15,5 +15,7 @@
                 "terminal.integrated.cwd": "${containerWorkspaceFolder}/my-app"
             }
         }
-    }
+    },
+    "postCreateCommand": "cd /workspaces && rm -rf Container_Template/.git",
+    "postStartCommand": "npm update"
 }
