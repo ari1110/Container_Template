@@ -16,6 +16,6 @@
             }
         }
     },
-    "postCreateCommand": "cd /workspaces && rm -rf Container_Template/.git",
+    "postCreateCommand": "bash -c 'if [[ \"$(basename \"$CONTAINER_WORKSPACE_FOLDER\")\" == \"Container_Template\" ]]; then rm -rf .git && git init && git add .; fi'",
     "postStartCommand": "cd ${containerWorkspaceFolder}/my-app && npm update"
 }
