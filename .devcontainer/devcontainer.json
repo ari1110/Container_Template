@@ -17,5 +17,5 @@
         }
     },
     "postCreateCommand": "cd /workspaces && rm -rf Container_Template/.git",
-    "postStartCommand": "npm update"
+    "postStartCommand": "cd ${containerWorkspaceFolder}/my-app && npm update"
 }
