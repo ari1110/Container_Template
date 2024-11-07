@@ -9,13 +9,8 @@
         "ghcr.io/devcontainers/features/github-cli:1": {}
     },
     "workspaceFolder": "${containerWorkspaceFolder}/my-app",
-    "customizations": {
-        "vscode": {
-            "settings": {
-                "terminal.integrated.cwd": "${containerWorkspaceFolder}/my-app"
-            }
-        }
+    "customizations": {"vscode": {"settings": {"terminal.integrated.cwd": "${containerWorkspaceFolder}/my-app"}}
     },
-    "postCreateCommand": "bash -c 'if [[ \"$(basename \"$CONTAINER_WORKSPACE_FOLDER\")\" == \"Container_Template\" ]]; then rm -rf .git && git init && git add .; fi'",
+    // "postCreateCommand": "bash -c 'if [[ \"$(basename \"$CONTAINER_WORKSPACE_FOLDER\")\" == \"Container_Template\" ]]; then rm -rf .git && git init && git add .; fi'",
     "postStartCommand": "cd ${containerWorkspaceFolder}/my-app && npm update"
 }

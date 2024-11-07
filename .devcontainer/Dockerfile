@@ -16,10 +16,6 @@ RUN apt-get update && apt-get install -y \
     libxrandr2 \
     libgbm1 \
     libasound2 \
-    python3 \
-    python3-pip \
-    python3-venv \
-    pipx \
     jq \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
